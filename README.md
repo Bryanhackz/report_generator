@@ -61,3 +61,7 @@ Add to crontab to run every Monday at 08:00:
   is covered by `--dry-run` and by the fact that `smtplib` is part of the
   standard library; testing it would require a real SMTP server, which
   is out of scope.
+
+
+  ## Security Threat Model
+Credentials are loaded from a local `.env` file which is excluded from version control via `.gitignore`. This tool assumes execution in a trusted, local environment (e.g., a cron job on a secure server). If deployed to a shared environment, credentials must be injected via environment variables managed by a secret store (e.g., AWS Secrets Manager) instead of a `.env` file.
