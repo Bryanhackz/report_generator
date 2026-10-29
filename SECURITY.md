@@ -1,24 +1,16 @@
 # Security Policy
 
 ## Supported Versions
-Currently, only the latest `main` branch is supported with security updates.
+Currently, only the latest `main` branch is supported.
+
+## Scope
+This is a command-line interface (CLI) tool designed to run in a trusted local environment or cron job. It is not exposed to the public internet. The primary security concerns are the safe handling of SMTP credentials via environment variables (`.env`) and the prevention of SQL injection in local SQLite queries.
 
 ## Reporting a Vulnerability
-If you believe you have found a security vulnerability in any of our repositories, please report it privately.
+Please do not report security vulnerabilities through public GitHub issues. Send an email to **br4yangil006@gmail.com**. You should receive a response within 48 hours.
 
-**Please do not report security vulnerabilities through public GitHub issues.**
-
-Instead, please send an email to your-email@example.com. 
-
-You should receive a response within 48 hours. If for some reason you do not, please follow up via email to ensure we received your original message.
-
-Please include the following information in your report:
-- Type of issue (e.g., buffer overflow, SQL injection, cross-site scripting, etc.)
-- Full paths of source file(s) related to the manifestation of the issue
-- The location of the affected source code (tag/branch/commit or direct URL)
-- Any special configuration required to reproduce the issue
+Please include:
+- Type of issue (e.g., SQL injection, credential leak)
+- Full paths of source file(s) related to the issue
 - Step-by-step instructions to reproduce the issue
-- Proof-of-concept or exploit code (if possible)
-- Impact of the issue, including how an attacker might exploit the issue
-
-This information will help us triage your report more quickly.
+- Impact of the issue
